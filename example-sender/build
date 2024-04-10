@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+set -e
+
+ACTION="$1"
+
+if [ $ACTION = "build" ]; then
+    ./mvnw compile
+    ./mvnw verify -Djib.skip=true
+    exit
+fi
+
+if [ $ACTION = "local" ]; then
+    export CI_COMMIT_SHORT_SHA=$(git rev-parse --short=8 HEAD)
+    ./mvnw clean compile
+    ./mvnw verify -Djib.skip=true
+    exit
+fi
+
+
+echo "Unknown operation \"$ACTION\""
+exit 1

@@ -1,0 +1,33 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1"
+  ],
+  "credentialSubject": {
+    "gx-service-offering:dataProtectionRegime": [
+      "GDPR2016"
+    ],
+    "gx-service-offering:description": "Example Service",
+    "gx-service-offering:gdpr": [
+      {
+        "gx-service-offering:imprint": "https://gaia-x.eu/imprint/",
+        "gx-service-offering:privacyPolicy": "https://gaia-x.eu/privacy-policy/"
+      }
+    ],
+    "gx-service-offering:name": "ServiceOfferingExample1",
+    "gx-service-offering:providedBy": "",
+    "gx-service-offering:termsAndConditions": [
+      {
+        "gx-service-offering:hash": "myrandomhash",
+        "gx-service-offering:url": "https://example.com/terms"
+      }
+    ],
+    "gx-service-offering:webAddress": "https://atlas.server/ServiceOfferingExample1/pet",
+    "id": "foo"
+  },
+  "id": "foo",
+  "type": [
+    "VerifiableCredential",
+    "ServiceOffering",
+    "ServiceOfferingExample1"
+  ]
+}
